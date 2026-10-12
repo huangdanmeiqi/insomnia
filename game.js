@@ -35,7 +35,7 @@ const EVENTS = {
   17: { title: "LIE FLAT",        desc: "Thinking about nothing at all", wake: -1, skip: 1 },
   18: { title: "CRINGE MEMORY",   desc: "That awkward moment from three years ago comes back", wake: 2 },
   19: { title: "COUNTING SHEEP",  desc: "One sheep, two sheep, three sheep...", wake: -1 },
-  20: { title: "TOMORROW'S LIST", desc: "Mentally writing tomorrow's to-do list", wake: 1 },
+  20: { title: "TO-DO LIST"     , desc: "Mentally writing tomorrow's to-do list", wake: 1 },
   22: { title: "HYPNOTIC VORTEX", desc: "Staring at the ceiling, consciousness slowly falls asleep", wake: -2, skip: 1 },
   23: { title: "ZZZ",             desc: "Finally, a little drowsy", wake: -2 },
   24: { title: "FALLING JOLT",    desc: "A sudden jolt just as you drift off", move: -2 },
@@ -240,7 +240,7 @@ async function resolve(p, byDice) {
   const cell = B.ring[idx];
 
   if (byDice && SHORTCUTS[idx] && p.step + SETTINGS.shortcutJump <= RING) {
-    showCard({ color: SHORTCUTS[idx][1], title: "DREAM SHORTCUT", desc: "Dozing off, you drift straight across the board",
+    showCard({ color: SHORTCUTS[idx][1], title: "DREAM JUMP", desc: "Dozing off, you drift straight across the board",
       fx: `Move +${SETTINGS.shortcutJump}   Wake ${SETTINGS.shortcutWake}` });
     await sleep(500);
     p.step += SETTINGS.shortcutJump; render(); await sleep(350);
