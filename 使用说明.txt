@@ -1,0 +1,15 @@
+《失眠夜行》网页版 v2（按「网页尺寸大小.ai」1920×1080 版面）
+
+运行：在 VS Code 打开这个文件夹 → 右键 index.html → Open with Live Server
+      （或直接双击 index.html）
+
+玩法：4 人轮流，点 MY TURN（或按空格）掷骰子。MY TURN 的颜色 = 当前玩家颜色。
+      SCORE = 清醒值，开局 5。走到 06:00（中心）时 SCORE ≤ 2 才算睡着获胜，
+      否则退回 03:00、SCORE -2。走进自己颜色的通道时 SCORE -2。有人睡着后，MY TURN 变成 PLAY AGAIN，点它重新开始。
+
+改内容：
+  game.js 开头 SETTINGS  —— 数值（开局分数、获胜门槛、捷径格数等）
+  game.js 开头 EVENTS    —— 每个格子的 TIPS 英文标题、说明和效果（编号 = 格子图片编号）
+  assets/board.jpg       —— 棋盘图（从 网页尺寸大小.ai 导出）
+  assets/tips/NN.png     —— TIPS 卡片里的图（NN = 外圈格子编号）
+  board-data.js          —— 每一格的坐标（换棋盘排列时需要重新导出）
