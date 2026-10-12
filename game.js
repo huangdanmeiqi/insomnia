@@ -76,7 +76,7 @@ function newGame() {
   };
   buildPieces();
   showDie(6);
-  showCard({ img: "assets/tips/51.png", color: "red", title: "GOOD NIGHT",
+  showCard({ img: "51.png", color: "red", title: "GOOD NIGHT",
     desc: "Reach 06:00 with a wake score of 2 or less to fall asleep", fx: "Click MY TURN to roll" });
   render();
 }
@@ -251,7 +251,7 @@ async function resolve(p, byDice) {
   const ev = cell.tile && EVENTS[cell.tile];
   if (!ev) { bump(p); return false; }
 
-  const img = `assets/tips/${String(idx).padStart(2, "0")}.png`;
+  const img = `${String(idx).padStart(2, "0")}.png`;
   let wake = ev.wake || 0;
   if (ev.flip) {
     showCard({ img, color: cell.color, title: ev.title, desc: ev.desc, fx: "Rolling..." });
