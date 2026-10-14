@@ -125,7 +125,7 @@ async function rollDie() {
 // ───────────── TIPS 卡片 ─────────────
 function showCard({ img, color, title, desc, fx }) {
   const c = HEX[color] || HEX.red;
-  const text = color === "yellow" ? HEX.red : c;
+  const text = c;
   $("card").style.borderColor = c;
   $("card").style.color = text;
   if (img) { $("cardImg").src = img; $("cardImg").hidden = false; $("cardBlock").hidden = true; }
